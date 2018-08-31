@@ -49,7 +49,7 @@ i:hover {
 #profil,
 #doswiadczenie,
 #umiejetnosci,
-#zgoda {
+#madeby {
     padding: 20px 10%;
 }
 
@@ -179,18 +179,19 @@ opacity: 1;
     margin: 0;
 }
 
-#zgoda {
+#madeby {
     position: relative;
 }
 
-#zgoda > p {
+#madeby > p {
     padding-top: 20px;
     font-size: 12px;
 }
 
-/*-------------------------------------*/
+/*    ---------------------------------------------------------------    */
 
 @media all and (max-width: 1170px) {
+    
 
     #doswiadczenie > .work-items > .work {
         flex-basis: 50%;
@@ -204,14 +205,15 @@ opacity: 1;
 
 }
 
-@media all and (max-width: 650px) {
-
-    p {
-        font-size: 85%;
-    }
+@media all and (max-width: 750px) {
     
     #name > .myName {
-        width: 100%;
+        flex-basis: 100%;
+        min-width: calc(100% - 20%);
+    }
+
+    p {
+        font-size: 75%;
     }
     
     #profil > p {
@@ -226,5 +228,34 @@ opacity: 1;
 
     #umiejetnosci > .icons > figure {
         flex-basis: 48%;
+    }
+    
+     p > i.fa-angle-double-left:before {
+        content: none;
+    }
+    
+}
+
+@media all and (max-width: 370px) {
+    
+    #name > .myName {
+        flex-basis: 100%;
+        min-width: calc(100% - 20%);
+    }
+
+    p {
+        font-size: 55%;
+    }
+    
+    #madeby > p {
+        font-size: 55%;
+    }
+    
+    p > i.fa-angle-double-left:before {
+        content: none;
+    }
+    
+    #umiejetnosci > .icons > figure > figcaption {
+        font-size: 70%;
     }
 }
