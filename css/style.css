@@ -39,7 +39,6 @@
     50% {border-color: rgba(0,0,0,.75)}
 }
 
-
 /*---------------------------------------hello-end ---------------------------*/
 
 button#czesc {
@@ -68,9 +67,14 @@ button#czesc:hover {
     border: 2px solid transparent;
 }
 
-
-
-
+.change-opacity {
+    animation: fadeOut 2s;
+}
+@keyframes fadeOut {
+    0%{opacity: 1}
+    60%{opacity: 0}
+    100%{opacity: 0}
+}
 
 
 

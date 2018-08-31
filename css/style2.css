@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+}
+
+body {
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+body.fade-in {
+    opacity: 0;
+
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 20px;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    background-color: white;
+    z-index: 1;
+}
+
+p {
+    margin: 2px 0;
+}
+
+span {
+    color: #1a0dab;
+    text-decoration: underline;
+    display: block;
+}
+
+#name,
+#profil,
+#doswiadczenie,
+#umiejetnosci,
+#zgoda {
+    padding: 20px 10%;
+}
+
+#name {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#name > .myName {
+    flex-basis: 70%;
+    padding-bottom: 20px;
+}
+
+#name > .photo {
+    flex-basis: 25%;
+}
+
+#name > .photo > img {
+    height: 200px;
+    border: 2px solid black;
+}
+
+#profil > p {
+    width: 70%;
+}
+
+.line {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.black-line:after {
+    content: '';
+    width: 100%;
+    border-bottom: solid 4px black;
+    position: absolute;
+    right: 0;
+    top: 12px;
+}
+
+#doswiadczenie > .work-items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#doswiadczenie > .work-items > .work {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 230px;
+}
+
+#umiejetnosci > .icons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+#umiejetnosci > .icons > figure {
+    flex-basis: 12%;
+    text-align: center;
+}
+
+#umiejetnosci > .icons > figure > figcaption {
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#umiejetnosci > .icons > figure > img {
+    margin: 18px;
+    width: 70px;
+    transition: 1s;
+    margin: 10px 18px 23px 18px;
+}
+
+#umiejetnosci > .icons > figure > img:hover {
+    transform: rotate(360deg);
+}
+
+#zgoda {
+    position: relative;
+}
+
+#zgoda > p {
+    padding-top: 20px;
+    font-size: 12px;
+}
+
+/*-------------------------------------*/
+
+@media all and (max-width: 1170px) {
+
+    #doswiadczenie > .work-items > .work {
+        flex-basis: 50%;
+        padding: 10px;
+        min-width: 230px;
+    }
+
+    #umiejetnosci > .icons > figure {
+        flex-basis: 24%;
+    }
+
+}
+
+@media all and (max-width: 650px) {
+
+    #profil > p {
+        width: 100%;
+    }
+
+    #doswiadczenie > .work-items > .work {
+        flex-basis: 100%;
+        padding: 10px;
+        min-width: 230px;
+    }
+
+    #umiejetnosci > .icons > figure {
+        flex-basis: 48%;
+    }
+}
