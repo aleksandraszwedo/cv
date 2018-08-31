@@ -206,6 +206,14 @@ opacity: 1;
 
 @media all and (max-width: 650px) {
 
+    p {
+        font-size: 85%;
+    }
+    
+    #name > .myName {
+        width: 100%;
+    }
+    
     #profil > p {
         width: 100%;
     }
