@@ -1,1 +1,1 @@
-document.onload(setTimeout( function() {document.body.classList.add('fade-in') }, 1000 ));
+window.onload = setTimeout( function() {document.body.classList.add('fade-in') }, 1000 );
