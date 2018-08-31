@@ -5,12 +5,12 @@
 }
 
 body {
-    opacity: 1;
-    transition: 1s opacity;
+    opacity: 0;
+    transition: 1s opacity ease-out;
 }
 
 body.fade-in {
-    opacity: 0;
+    opacity: 1;
 
 }
 
@@ -37,6 +37,14 @@ span {
     display: block;
 }
 
+i {
+    transition: 0.3s;
+}
+
+i:hover {
+    transform: rotate(360deg);
+}
+
 #name,
 #profil,
 #doswiadczenie,
@@ -56,6 +64,18 @@ span {
 #name > .myName {
     flex-basis: 70%;
     padding-bottom: 20px;
+}
+
+#name > .myName > p > i {
+    color: black;
+    font-size: 15px;
+    margin-left: 10px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#name > .myName > p:hover > i {
+opacity: 1;
 }
 
 #name > .photo {
@@ -114,6 +134,7 @@ span {
 #umiejetnosci > .icons > figure {
     flex-basis: 12%;
     text-align: center;
+    position: relative;
 }
 
 #umiejetnosci > .icons > figure > figcaption {
@@ -130,8 +151,32 @@ span {
     margin: 10px 18px 23px 18px;
 }
 
-#umiejetnosci > .icons > figure > img:hover {
-    transform: rotate(360deg);
+#umiejetnosci > .icons > figure:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 10px;
+    background-color: transparent;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+}
+
+#umiejetnosci > .icons > figure:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+#umiejetnosci > .icons > figure:hover > img {
+    margin: 0;
 }
 
 #zgoda {
